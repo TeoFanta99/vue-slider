@@ -47,6 +47,9 @@ createApp({
                 this.activeItem = 0;
             }
         },
+        select (index) {
+            this.activeItem = index;
+        }
     },
 
     mounted  () {
