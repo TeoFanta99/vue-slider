@@ -1,10 +1,9 @@
 const { createApp } = Vue;
 
-
 createApp({
     data () {
         return {
-            activeImage: 0,
+            activeItem: 0,
             slides: [
                 {
                     image: 'img/01.webp',
@@ -35,14 +34,20 @@ createApp({
         }
     },
 
-    // methods: {
-    //     prevBtn () {
-
-    //     },
-    //     nextBtn () {
-
-    //     }
-    // },
+    methods: {
+        prevBtn () {
+            this.activeItem--;
+            if (this.activeItem < 0) {
+                this.activeItem = this.slides.length - 1;
+            }
+        },
+        nextBtn () {
+            this.activeItem++;
+            if (this.activeItem > this.slides.length - 1) {
+                this.activeItem = 0;
+            }
+        }
+    },
 
     mounted  () {
         console.log(this.slides);
