@@ -32,8 +32,9 @@
                 <div class="thumbs">
                     <div class="prev" @click="prevBtn"></div>
                     <div class="next" @click="nextBtn"></div>
+
                     <div class="thumb">
-                        <img src="img/01.webp" alt="Svezia" />
+                        <img v-for="(img, i) in slides" :src="slides[i].image" alt=""/>
                     </div>
                 </div>
 
@@ -41,7 +42,6 @@
         </div>
 
     </div>
-
 
     <script src="./js/script.js"></script>
 </body>
