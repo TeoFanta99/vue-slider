@@ -33,8 +33,8 @@
                     <div class="prev" @click="prevBtn"></div>
                     <div class="next" @click="nextBtn"></div>
 
-                    <div class="thumb">
-                        <img v-for="(img, i) in slides" :src="slides[i].image" alt=""/>
+                    <div v-for="(img, i) in slides" class="thumb">
+                        <img :src="slides[i].image" alt=""/>
                     </div>
                 </div>
 
