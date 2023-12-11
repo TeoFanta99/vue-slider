@@ -46,7 +46,7 @@ createApp({
             if (this.activeItem > this.slides.length - 1) {
                 this.activeItem = 0;
             }
-        }
+        },
     },
 
     mounted  () {
