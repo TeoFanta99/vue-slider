@@ -34,6 +34,13 @@ createApp({
         }
     },
 
+    mounted  () {
+        console.log(this.slides);
+
+        // quando la pagina è renderizzata, parte il timer di tre secondi
+        this.timer = setInterval(this.nextBtn, 3000);
+    },
+
     methods: {
         prevBtn () {
             this.activeItem--;
@@ -52,9 +59,7 @@ createApp({
         }
     },
 
-    mounted  () {
-        console.log(this.slides);
-    }
-
 }).mount("#app");
+
+
 
